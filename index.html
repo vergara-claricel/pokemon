@@ -57,6 +57,7 @@
     .poke-name {
         text-align: center;
         font-weight: 600;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 
     #pokemonName{
@@ -81,7 +82,7 @@
     }
     .hp span,
     #type {
-        font-size: 15px;
+        font-size: 14px;
         letter-spacing: 0.4px;
         font-weight: 600;
     }
@@ -160,7 +161,7 @@
                 <span>HP</span> ${data.stats[0].base_stat}
                 </p>
                 <img src=${data.sprites.front_default} id="pokePic" />
-                <h2 class="poke-name">${data.name}</h2>
+                <h2 class="poke-name">${data.name.toUpperCase()}</h2>
                 <div class="types" id="type">
                     ${data.types[0].type.name}
                 </div>
@@ -186,6 +187,7 @@
                 document.getElementById('card').style.background = `radial-gradient(circle at 50% 10%, ${color} 46%, #ffffff 46%)`;
                 document.getElementById('card').querySelectorAll("#type").forEach((typeColor) => {
                 typeColor.style.backgroundColor = color;
+                document.body.style.backgroundColor = color;
                 })
                 }
 
