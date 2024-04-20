@@ -15,31 +15,32 @@
     body {
         background-color: rgb(189, 185, 185);
     }
+
     .container{
     width: 350px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
     }
 
     #hehe{
         margin-top: 1rem;
         width:250px;
-        position: absolute;
-        top: 90%;
-        left: 40%;
+    }
+
+    #parent{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* This will make the parent div take the full height of the viewport */
+        flex-direction: column;
     }
     #card {
-        position: relative;
         width: 100%;
         padding: 30px 20px;
-        box-shadow: 0 30px 50px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 30px 50px white;
         border-radius: 10px;
     }
     .hp {
     width: 80px;
-    background-color: #ffffff;
+    background-color: white;
     text-align: center;
     padding: 8px 0;
     border-radius: 30px;
@@ -65,7 +66,7 @@
         border-radius: 5px;
         height: 50px;
         line-height: normal;
-        color: #282828;
+        color: black;
         display: block;
         width: 100%;
         box-sizing: border-box;
@@ -117,7 +118,6 @@
 <body>
     <div id="parent">
         <div class="container">
-            <div id="div"></div>
                 <div id="card"></div>
         </div>
         <div id="hehe">
